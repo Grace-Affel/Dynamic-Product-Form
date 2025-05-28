@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Entry</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left: Form -->
+      <section id="registration-form">
+        <h1>Add New Product</h1>
+        <form id="product-form">
+          <div id="message"></div>
+
+          <label for="name"
+            >Name
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter Product Name"
+            />
+          </label>
+
+          <label for="description"
+            >Description
+            <textarea
+              id="description"
+              name="description"
+              placeholder="Describe Product"
+            ></textarea>
+          </label>
+
+          <label for="image-url"
+            >Image URL
+            <input
+              type="text"
+              id="image-url"
+              name="image-url"
+              placeholder="Insert Image URL"
+            />
+          </label>
+
+          <label for="price"
+            >Price
+            <input
+              type="number"
+              id="price"
+              name="price"
+              placeholder="Enter Price"
+            />
+          </label>
+
+          <label for="brand"
+            >Brand
+            <input
+              type="text"
+              id="brand"
+              name="brand"
+              placeholder="Enter Brand"
+            />
+          </label>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <!-- Right: Product Display -->
+      <section id="product-display">
+        <h2>Products</h2>
+        <div id="product-list"></div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,226 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  color: purple;
+  background-color: rgb(253, 178, 249);
+  padding: 1rem;
+  text-align: center;
+  /* border-radius: 1rem; */
+/* border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+body {
+  background-color: beige;
+}
+
+#forms {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+  background-color: rgb(252, 217, 223);
+  color: purple;
+  font-weight: bold;
+  padding: 2rem;
+}
+
+#registration-form {
+  width: 30%;
+  /* margin: 5rem auto; */
+/* border-radius: 4rem;
+}
+
+select,
+input,
+textarea {
+  padding: 8px;
+  border-radius: 3rem;
+  border: none;
+  background-color: white;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 8px;
+  width: 7rem;
+  color: purple;
+  font-weight: bold;
+  background-color: rgb(253, 188, 248);
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  color: white;
+  background-color: purple;
+}
+
+select,
+input,
+textarea:hover {
+  padding: 20px;
+  border-radius: 3rem;
+  border: none;
+  background-color: rgb(230, 157, 181);
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+#message {
+  font-size: 18px;
+  text-align: center;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  background-color: #fefaf1; /* soft champagne */
+  color: #4e342e; /* deep brown */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* === LEFT: FORM === */
+#registration-form {
+  flex: 1;
+  background-color: #fffdf6;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px rgba(158, 132, 106, 0.2);
+  border: 2px solid #d7af75; /* champagne gold */
+  min-width: 320px;
+}
+
+h1,
+h2 {
+  font-family: "Pacifico", cursive;
+  background-color: #a67c52; /* rich brown */
+  color: #fffdf6;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* === FORM ELEMENTS === */
+form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #4e342e;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 1.5rem;
+  border: 1px solid #d7af75;
+  background-color: #fffaf0;
+  margin-top: 0.25rem;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+/* === HOVER EFFECTS === */
+input:hover,
+textarea:hover,
+select:hover {
+  background-color: #f5e6cc; /* soft champagne hover */
+  border: 1px solid #a67c52;
+  padding: 0.85rem;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #a67c52;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8d6e4f;
+}
+
+/* === MESSAGE BOX === */
+#message {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+#message.error {
+  color: #b71c1c;
+}
+
+#message.success {
+  color: #2e7d32;
+}
+
+/* === RIGHT: PRODUCT DISPLAY === */
+#product-display {
+  flex: 2;
+  background-color: #fffdf6;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px rgba(158, 132, 106, 0.2);
+  border: 2px solid #d7af75;
+  min-width: 320px;
+}
+
+#product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* === PRODUCT CARD === */
+.product-card {
+  border: 1px solid #d7af75;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #fdf6ec;
+  text-align: center;
+  color: #4e342e;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+  object-fit: cover;
+}
