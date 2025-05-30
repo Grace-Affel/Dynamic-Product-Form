@@ -2,21 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Product Entry</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <script src="index.js" defer></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <nav class="nav">
+      <span class="logo">The Palm</span>
+      <ul class="nav-list">
+        <li>Home</li>
+        <li>About</li>
+        <li>Products</li>
+        <li>Cart</li>
+      </ul>
+    </nav>
+
     <div class="container">
-      <!-- Left: Form -->
+      <!-- Side by side layout -->
       <section id="registration-form">
         <h1>Add New Product</h1>
-        <form id="product-form">
+        <form id="product-form" novalidate>
           <div id="message"></div>
 
           <label for="name"
@@ -26,6 +36,7 @@
               id="name"
               name="name"
               placeholder="Enter Product Name"
+              required
             />
           </label>
 
@@ -35,16 +46,18 @@
               id="description"
               name="description"
               placeholder="Describe Product"
+              required
             ></textarea>
           </label>
 
           <label for="image-url"
             >Image URL
             <input
-              type="text"
+              type="url"
               id="image-url"
               name="image-url"
               placeholder="Insert Image URL"
+              required
             />
           </label>
 
@@ -55,6 +68,9 @@
               id="price"
               name="price"
               placeholder="Enter Price"
+              required
+              min="0"
+              step="0.01"
             />
           </label>
 
@@ -69,14 +85,16 @@
           </label>
 
           <button type="submit">Submit</button>
+          <button type="button" id="reset-all">Reset All</button>
         </form>
       </section>
 
-      <!-- Right: Product Display -->
       <section id="product-display">
         <h2>Products</h2>
         <div id="product-list"></div>
       </section>
     </div>
+    <br />
+    <section id="footer">Your Number One Shop</section>
   </body>
 </html>
